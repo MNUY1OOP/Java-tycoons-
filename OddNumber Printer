@@ -1,0 +1,11 @@
+public class OddNumbersPrinter {
+    public static void main(String[] args) {
+        
+        for (int t = 1; t<= 50; i++) {
+            
+            if (t % 2 != 0) {
+                System.out.println(i);
+            }
+        }
+    }
+}

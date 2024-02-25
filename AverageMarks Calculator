@@ -1,0 +1,31 @@
+public class AverageMarksCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of students: ");
+        int numStudents = scanner.nextInt();
+
+        // Array to store marks of students
+        int[] marks = new int[numStudents];
+
+        // Input marks for each student
+        for (int i = 0; i < numStudents; i++) {
+            System.out.print("Enter marks for student " + (i + 1) + ": ");
+            marks[i] = scanner.nextInt();
+        }
+
+        // Calculate total marks
+        int totalMarks = 0;
+        for (int mark : marks) {
+            totalMarks += mark;
+        }
+
+        // Calculate average marks
+        double averageMarks = (double) totalMarks / numStudents;
+
+        System.out.println("Average marks of students: " + averageMarks);
+
+        scanner.close();
+    }
+}

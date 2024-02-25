@@ -1,0 +1,14 @@
+public class Interest{
+public static void main(String[] args)
+{
+double rate = 0.04;
+//float Loan;
+System.out.println("Enter Amount you are given");
+java.util.Scanner scanner = new java.util.Scanner(System.in);
+float Principal = scanner.nextFloat();
+System.out.println("Enter the number of years since the year you take the loan");
+float Years = scanner.nextFloat();
+double CompoundInterest = (Principal * rate * Years);
+double Loan = CompoundInterest +  Principal;
+System.out.println("The total Loan to be paid is :" + Loan);
+}

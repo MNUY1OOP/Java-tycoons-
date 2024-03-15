@@ -1,0 +1,14 @@
+class Person{
+private String name;
+private int age;
+Person(int age,String name){
+this.name = name;
+this.age = age;
+}
+public void dips(){
+System.out.println("Age is " + age + "\n name is " + name);
+}
+
+public static void main(String[] args){
+Person x = new Person(56,"gert");
+x.dips();

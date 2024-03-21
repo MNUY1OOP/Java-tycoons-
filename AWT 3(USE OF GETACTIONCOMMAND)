@@ -1,0 +1,46 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.net.http.WebSocket;
+
+
+public class GETSOURCE extends Frame{
+    private Button UP;
+    private Button DOWN;
+
+    private int r =0;
+    private TextArea Q;
+
+
+    GETSOURCE(){
+        setLayout(new FlowLayout());
+        UP = new Button("up");
+        add(UP);
+        DOWN = new Button("down");
+        add(DOWN);
+        Q = new TextArea(2,5);
+        add(Q);
+        AllBurtons Y = new AllBurtons();
+        UP.addActionListener(Y);
+        DOWN.addActionListener(Y);
+        setSize(150,200);
+        setTitle("WIZARD");
+        setVisible(true);
+
+
+    }
+    public class AllBurtons implements ActionListener{
+        public void actionPerformed(ActionEvent evt){
+            String e = evt.getActionCommand();
+            if(e.equals("up") ){
+                r++;
+                Q.setText(r + "")  ;
+
+            }
+            else {
+                r--;
+                Q.setText(r + "");
+            }
+
+        }
+    }
+}

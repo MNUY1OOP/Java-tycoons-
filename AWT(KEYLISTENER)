@@ -1,0 +1,45 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class KEYLISTENER extends Frame{
+    private TextField Q;
+    private TextArea R;
+    KEYLISTENER(){
+        setLayout(new FlowLayout());
+        Label E = new Label("enter the integer");
+        add(E);
+        Q = new TextField(10);
+        add(Q);
+        Label T = new Label("WIZARD THERE IS THE OUTPUT");
+        add(T);
+        R = new TextArea(4,10);
+        add(R);
+        Q.addKeyListener(new LISTENER());
+        setTitle("WIZARD_HASH");
+        setSize(300,400);
+        setVisible(true);
+
+
+
+
+    }
+    private class LISTENER implements KeyListener {
+      //  @Override
+        public void keyTyped(KeyEvent evt) {
+            R.append("You entered" + evt.getKeyChar() + "\n");
+
+        }
+
+
+
+        public void keyPressed(KeyEvent evt){}
+        public void keyReleased(KeyEvent evt){}
+
+
+    }
+
+
+
+
+
+}

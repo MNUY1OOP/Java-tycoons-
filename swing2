@@ -1,0 +1,40 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+//package persona;
+public class PERSONA extends JFrame{
+    private JTextField counter;
+    private JButton UP;
+    private JButton DOWN;
+    
+    public PERSONA(){
+        Container q = getContentPane();
+        q.setLayout(new FlowLayout());
+        q.add(new JLabel("wizard is at work"));
+        counter = new JTextField(10);
+        //counter.setEditable(false);
+        UP = new JButton("uper");
+        DOWN = new JButton("DOWN");
+        
+        add(UP);
+        add(DOWN);
+        add(counter);
+        setTitle("wizards");
+        setSize(200,300);
+        setVisible(true);
+        
+        
+        
+        
+    }
+    public static void main(String[] args){
+     
+        PERSONA T = new PERSONA();
+    }
+    
+}

@@ -1,0 +1,34 @@
+import java.awt.*;
+import java.awt.event.*;
+public class INNERCLASSES extends Frame{
+    private Button Q;
+    private TextField R;
+    private int count = 0;
+
+    INNERCLASSES(){
+        setLayout(new FlowLayout());
+        Q = new Button("COUNT");
+        add(Q);
+        ACTOR C = new ACTOR();
+        Q.addActionListener(C);
+        setTitle("FLOW LAYOUT");
+        R = new TextField(10);
+        add(R);
+        setSize(150,200);
+        setVisible(true);
+
+
+    }
+    private class ACTOR implements ActionListener{
+        public void actionPerfomed(ActionEvent evt){
+            System.out.println("button pressed");
+            ++count;
+            R.setText(count + "");
+        }
+       // public void keyPressed(ActionEvent evt){ }
+     //   public void keyReleased(ActionEvent evt){ }
+
+
+
+    }
+}

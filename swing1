@@ -1,0 +1,22 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class Person extends JFrame{ 
+    public Person(){
+    Container x = getContentPane();
+    x.setLayout(new FlowLayout());
+    x.add(new JLabel("hello wizard"));
+    x.add(new JButton("Button"));
+    x.setVisible(true);
+    x.setSize(150,450);
+    
+    
+    
+    
+    
+        
+    }
+    public static void main(String[] args){
+        Person v = new Person();
+    }
+}

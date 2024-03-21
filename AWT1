@@ -1,0 +1,35 @@
+
+import java.awt.*;//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main extends Frame{
+    public Main() {
+        Button G = new Button("gret");
+        G.setLabel("HI idLABEL");
+      //  G.getLabel();
+        TextField RE = new TextField();
+        RE.setBounds(60,34,50,50);
+        RE.setEditable(false);
+        add(RE);
+
+
+
+        //Panel r = new Panel();
+
+      //  Label Y = new Label("gerd",Label.RIGHT);
+
+       // add(Y);
+      //  G.setBounds(30,34,100,450);
+        add(G);
+        setSize(200,400);
+        setTitle("ITS ARON BEIBY");
+
+        setVisible(true);
+
+    }
+
+    public static void main(String[] args) {
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+        Main c = new Main();
+        }
+    }

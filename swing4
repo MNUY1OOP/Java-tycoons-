@@ -1,0 +1,139 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+//package countlist;
+
+/**
+ *
+ * @author COMP LAB 15
+ */
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class COUNTLIST extends Frame {
+    private TextField q;
+    private TextField w;
+   
+    private Button r;
+    private Button one;
+    private Button two;
+    private Button three;
+    private Button four;
+    private Button five;
+    
+    
+    
+    private int y = 0;
+
+    /**
+     * @param args the command line arguments
+     */
+    public COUNTLIST(){
+    setLayout(new FlowLayout());
+    temp ols  = new temp();
+    Button e;
+   /* for(int p = 0 ;p<=10;p++){
+         Button l  = (p + "");
+       
+    }*/
+   
+    
+    q = new TextField();
+    w = new TextField();
+    e = new Button("+");
+    r = new Button("-");
+    one = new Button("1");
+    two = new Button("2");
+    three = new Button("3");
+    four = new Button("4");
+    five = new Button("5");
+    one.addActionListener(ols);
+    two.addActionListener(ols);
+    three.addActionListener(ols);
+    four.addActionListener(ols);
+    five.addActionListener(ols);
+    
+  /*  e.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent evt)
+        {
+            y ++;
+            w.setText(y + "");
+        }
+    });*/
+   /* r.addActionListener(new ActionListener(){
+        public void actionPerformed(ActionEvent evt){
+            y --;
+            q.setText(y + "");
+        }
+    });*/
+   
+   e.addActionListener(ols);
+   r.addActionListener(ols);
+   
+    
+    add(q);
+    add(w);
+    add(e);
+    add(r);
+    add(one);
+    add(two);
+    add(three);
+    add(four);
+    add(five);
+    setSize(1000,1550);
+    setVisible(true);
+            
+    
+}
+    public static void main(String[] args) {
+        // TODO code application logic here
+        COUNTLIST t = new COUNTLIST();
+    }
+    public class temp implements ActionListener{
+        public void actionPerformed(ActionEvent evt)
+        {
+            String op = evt.getActionCommand();
+            if(op.equals("1")){
+                y = 1;
+                q.setText(y + "");
+                        
+                        }
+            else if(op.equals("2")){
+                y = 2;
+                q.setText(y + "");
+            }
+            else if(op.equals("3")){
+                 y = 3;
+                q.setText(y + "");
+            }
+                 
+            else if(op.equals("4")){
+                 y = 4;
+                q.setText(y + "");
+            }
+             else if(op.equals("5")){
+                 y = 5;
+                q.setText(y + "");
+            }
+            
+                    
+            else if(op.equals("5")){
+                y = 5;
+                q.setText(y + "");
+                    
+  
+            }
+            else if(op.equals("+") ){
+                y++;
+                q.setText(y + "");
+            }
+            else 
+                y--;
+               
+                
+        }
+    }
+    
+}
